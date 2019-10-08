@@ -28,21 +28,37 @@ class TicTacToe
     input.to_i-1
   end
   
+<<<<<<< HEAD
   def move(index, token = "X")
     @board[index] = token
   end
   
   def position_taken?(index)
     if @board[index] == " "
+=======
+  def move(input_to_index, token = "X")
+    @board[input_to_index] = token
+  end
+  
+  def position_taken?(input_to_index)
+    if @board[input_to_index] == " "
+>>>>>>> ff64e2189c49e887caf32cb3d613f1351579192d
       false
     else true
     end
   end
   
+<<<<<<< HEAD
   def valid_move?(index)
     if position_taken?(index) || index < 0 || index > 8
       false
     else true
+=======
+  def valid_move?(input_to_index)
+    if input_to_index == 0..8
+      true
+    else false
+>>>>>>> ff64e2189c49e887caf32cb3d613f1351579192d
     end
   end
   
@@ -72,6 +88,10 @@ class TicTacToe
       display_board
     else 
       puts "Invalid move. Input a number between 1 and 9."
+<<<<<<< HEAD
+=======
+      choice = gets
+>>>>>>> ff64e2189c49e887caf32cb3d613f1351579192d
       turn
     end
   end
@@ -123,9 +143,15 @@ class TicTacToe
       turn
     end
     if won? != false
+<<<<<<< HEAD
       puts "Congratulations #{winner}!"
     elsif draw? == true
       puts "Cat's Game!"
+=======
+      puts "#{winner} is the winner!"
+    elsif draw? == true
+      puts "The game was a draw."
+>>>>>>> ff64e2189c49e887caf32cb3d613f1351579192d
     end
   end
   
